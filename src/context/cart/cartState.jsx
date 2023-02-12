@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
-import cartContext from './cartContext';
-import cartrReducer from './cartrReducer';
+import CartContext from './cartContext';
+import cartReducer from './cartReducer';
+import { sumItems } from './cartReducer';
 
 const CartState = ({ children }) => {
   // Initial state of the cart
@@ -10,12 +11,32 @@ const CartState = ({ children }) => {
   };
 
   // Set the reducer
-  const [state, dispatch] = useReducer(cartrReducer, initialState);
+  const [state, dispatch] = useReducer(cartReducer, initialState);
 
-  const addToCart = (payload) => { dispatch({ type: 'add', payload }); };
-  const deleteFromCart = (payload) => { dispatch({ type: 'remove', payload }); };
-  const increaseCart = (payload) => { dispatch({ type: 'increase', payload }); };
-  const decreaseCart = (payload) => { dispatch({ type: 'decrease', payload }); };
-  const clearCart = (payload) => { dispatch({ type: 'clear', payload }); };
-  const checkoutCart = (payload) => { dispatch({ type: 'checkout', payload }); };
+  const addToCart = (payload) => { dispatch({ type: 'Add', payload }); };
+  const removeFromCart = (payload) => { dispatch({ type: 'Remove', payload }); };
+  const increaseCart = (payload) => { dispatch({ type: 'Increase', payload }); };
+  const decreaseCart = (payload) => { dispatch({ type: 'Decrease', payload }); };
+  const clearCart = () => { dispatch({ type: 'Clear' }); };
+  const handleCheckout = () => { dispatch({ type: 'Checkout' }); };
+
+  return (
+    <CartContext.Provider
+      value={{
+        showCart: state.showCart,
+        cartItems: state.cartItems,
+        addToCart,
+        removeFromCart,
+        increaseCart,
+        decreaseCart,
+        handleCheckout,
+        clearCart,
+        ...state,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  )
 }
+
+export default CartState;

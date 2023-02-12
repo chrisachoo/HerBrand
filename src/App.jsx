@@ -1,13 +1,21 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { Navigation, ThemeSwitch } from './components'
+import { Navigation, Footer, ThemeSwitch } from './components'
 import { Showcase, Products, Signin, Signup } from './components/pages/'
 
 function App() {
   const location = useLocation()
 
+  // const NavTabs = () => {
+  //   return (
+  //     <>
+  //       <ThemeSwitch />
+  //       <Navigation />
+  //     </>
+  //   )
+  // }
+
   return (
     <>
-      {/* <ThemeSwitch /> */}
       {
         location.pathname !== '/signin' && location.pathname !== '/signup' && <Navigation />
       }
@@ -17,6 +25,10 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
+      {
+        location.pathname !== '/signin' && location.pathname !== '/signup'
+        && location.pathname !== '/' && <Footer />
+      }
     </>
   )
 }

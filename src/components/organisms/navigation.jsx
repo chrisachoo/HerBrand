@@ -22,6 +22,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import { Link as ReachLink } from 'react-router-dom'
+import { Action } from '../'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -69,7 +70,7 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button
+          {/* <Button
             as={ReachLink}
             fontSize={'sm'}
             fontWeight={400}
@@ -77,7 +78,8 @@ export default function WithSubnavigation() {
             to='/signin'
           >
             Sign In
-          </Button>
+          </Button> */}
+          <Action/>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
@@ -282,5 +284,5 @@ const NAV_ITEMS = [
   {
     label: 'Hire Designers',
     href: '#',
-  },
+  }
 ];

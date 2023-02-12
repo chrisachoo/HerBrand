@@ -13,6 +13,7 @@ import { Logo } from '../'
 
 const Footer = () => (
   <Container as="footer" role="contentinfo">
+    <Divider />
     <Stack
       spacing="8"
       direction={{
