@@ -70,27 +70,7 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          {/* <Button
-            as={ReachLink}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            to='/signin'
-          >
-            Sign In
-          </Button> */}
           <Action />
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            as={ReachLink}
-            variant='primary'
-            to='/signup'
-          >
-            Sign Up
-          </Button>
         </Stack>
       </Flex>
 
