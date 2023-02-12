@@ -1,18 +1,9 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { Navigation, Footer, Cart, ThemeSwitch } from './components'
+import { Navigation, Footer, Cart } from './components'
 import { Showcase, Products, Signin, Signup } from './components/pages'
 
 const App = () =>{
   const location = useLocation()
-
-  // const NavTabs = () => {
-  //   return (
-  //     <>
-  //       <ThemeSwitch />
-  //       <Navigation />
-  //     </>
-  //   )
-  // }
 
   return (
     <>
