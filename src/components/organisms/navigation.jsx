@@ -79,7 +79,7 @@ export default function WithSubnavigation() {
           >
             Sign In
           </Button> */}
-          <Action/>
+          <Action />
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
@@ -88,7 +88,7 @@ export default function WithSubnavigation() {
             as={ReachLink}
             variant='primary'
             to='/signup'
-            >
+          >
             Sign Up
           </Button>
         </Stack>

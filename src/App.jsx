@@ -1,8 +1,8 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { Navigation, Footer, ThemeSwitch } from './components'
-import { Showcase, Products, Signin, Signup } from './components/pages/'
+import { Showcase, Products, Signin, Signup } from './components/pages'
 
-function App() {
+const App = () =>{
   const location = useLocation()
 
   // const NavTabs = () => {
