@@ -3,7 +3,7 @@ import CartContext from './cartContext';
 import cartReducer from './cartReducer';
 import { sumItems } from './cartReducer';
 
-const CartState = ({ children }) => {
+export const CartState = ({ children }) => {
   // Initial state of the cart
   const initialState = {
     cartItems: [],
@@ -38,5 +38,3 @@ const CartState = ({ children }) => {
     </CartContext.Provider>
   )
 }
-
-export default CartState;

@@ -1,6 +1,6 @@
-export const add = 'Add';
-export const checkout = 'Checkout';
-export const clear = 'Clear';
-export const decrease = 'Decrease';
-export const increase = 'Increase';
-export const remove = 'Remove';
+export const Add = 'Add';
+export const Checkout = 'Checkout';
+export const Clear = 'Clear';
+export const Decrease = 'Decrease';
+export const Increase = 'Increase';
+export const Remove = 'Remove';

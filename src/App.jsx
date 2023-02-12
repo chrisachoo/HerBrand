@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { Navigation, Footer, ThemeSwitch } from './components'
+import { Navigation, Footer, Cart, ThemeSwitch } from './components'
 import { Showcase, Products, Signin, Signup } from './components/pages'
 
 const App = () =>{
@@ -24,6 +24,7 @@ const App = () =>{
         <Route path='/shop' element={<Products />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       {
         location.pathname !== '/signin' && location.pathname !== '/signup'

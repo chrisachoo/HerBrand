@@ -4,16 +4,17 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 import { AuthContextProvider } from './context/authContext'
 import { theme } from '@chakra-ui/pro-theme'
+import { CartState } from './context/cart/cartState';
 import App from './app'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <AuthContextProvider>
     <ChakraProvider theme={theme}>
-      <AuthContextProvider>
+      <CartState>
         <Router>
           <App />
         </Router>
-      </AuthContextProvider>
+      </CartState>
     </ChakraProvider>
-  </React.StrictMode>
+  </AuthContextProvider>
 )
