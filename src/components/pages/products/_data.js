@@ -30,25 +30,26 @@ export const images = [
     alt: 'Awesome watch',
   },
 ]
+
 export const products = [
   {
     id: '1',
-    name: 'Bamboo Tan',
-    currency: 'USD',
-    price: 199,
+    name: 'Crosskote',
+    currency: 'ZAR',
+    price: 999.89,
+    salePrice: 699.90,
     flag: 'new',
     imageUrl:
-      'https://images.unsplash.com/photo-1602024242516-fbc9d4fda4b6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
     rating: 4,
     ratingCount: 1,
     description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
-    images,
+      'Nothing speaks of elegance and passion than a good shoe.',
   },
   {
     id: '2',
     name: 'Iconic Turquoise',
-    currency: 'USD',
+    currency: 'ZAR',
     price: 199,
     salePrice: 179.99,
     flag: 'on-sale',
@@ -57,33 +58,69 @@ export const products = [
     rating: 4,
     ratingCount: 12,
     description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
+      'this is a modern Classic made for every occasion.',
     images,
   },
   {
     id: '3',
     name: 'Marble Leather',
-    currency: 'USD',
+    currency: 'ZAR',
     price: 199,
     imageUrl:
       'https://images.unsplash.com/photo-1564594985645-4427056e22e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
     rating: 4,
     ratingCount: 12,
     description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
+      'sleek captivating essence, for every occasion.',
     images,
   },
   {
     id: '4',
     name: 'Silve wolf',
-    currency: 'GBP',
+    currency: 'ZAR',
     price: 199,
     imageUrl:
       'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80',
     rating: 5,
     ratingCount: 1,
     description:
-      'With a sleek design and a captivating essence, this is a modern Classic made for every occasion.',
+      'sleek captivating essence, for every occasion.',
     images,
+  },
+  {
+    id: '5',
+    name: 'Ferragamo bag',
+    currency: 'ZAR',
+    price: 39.99,
+    description: 'Tan, 40mm, a modern Classic made for every occasion.',
+    quantity: 3,
+    imageUrl:
+      'https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80',
+    rating: 5,
+    ratingCount: 56,
+  },
+  {
+    id: '6',
+    price: 39.99,
+    currency: 'ZAR',
+    name: 'Bamboo Tan',
+    description: 'Tan, 40mm',
+    rating: 3,
+    ratingCount: 7,
+    quantity: 3,
+    imageUrl:
+      'https://images.unsplash.com/photo-1591561954557-26941169b49e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80',
+  },
+  {
+    id: '7',
+    price: 39.99,
+    currency: 'ZAR',
+    name: 'Yeezy Sneakers',
+    description: 'Tan, 40mm, a modern Classic made for every occasion.',
+    rating: 4,
+    ratingCount: 88,
+    quantity: 3,
+    imageUrl:
+      'https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80',
   },
 ]

@@ -21,8 +21,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
-import { Link as ReachLink } from 'react-router-dom'
-import { Action } from '../'
+import { Link as ReachLink } from 'react-router-dom';
+import { Action } from '../';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();

@@ -10,15 +10,32 @@ import {
   Text,
   useBreakpointValue,
   useColorModeValue,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { Rating } from './Rating'
-import { FavouriteButton } from './FavouriteButton'
-import { PriceTag } from './PriceTag'
+} from '@chakra-ui/react';
+import * as React from 'react';
+import { Rating } from './Rating';
+import { FavouriteButton } from './FavouriteButton';
+import { PriceTag } from './PriceTag';
+import CartContext from '../../../context/cart/cartContext';
+import { useContext } from 'react';
 
 export const ProductCard = (props) => {
-  const { product, rootProps } = props
-  const { name, imageUrl, price, salePrice, rating } = product
+  const { product, rootProps } = props;
+  const { id, name, imageUrl, price, salePrice, rating } = product;
+
+  const {
+    addToCart,
+    removeFromCart,
+    increaseCart,
+    decreaseCart,
+    clearCart,
+    handleCheckout,
+  } = useContext(CartContext);
+
+  //Check whether the product is in the cart or not
+  const isInCart = (product) => {
+    return !!cartItems.find((item) => item.id === product.id);
+  };
+
   return (
     <Stack
       spacing={useBreakpointValue({
@@ -62,7 +79,9 @@ export const ProductCard = (props) => {
         </HStack>
       </Stack>
       <Stack align="center">
-        <Button colorScheme="blue" width="full">
+        <Button colorScheme="blue" width="full"
+          onClick={() => addToCart(product)}
+        >
           Add to cart
         </Button>
         <Link

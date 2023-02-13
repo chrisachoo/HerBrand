@@ -1,0 +1,3 @@
+font-family: "Eczar", Georgia, serif;
+    --theme-color-dark: #006613;
+    --theme-color-light: #dff4d4;
