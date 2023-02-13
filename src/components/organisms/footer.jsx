@@ -7,6 +7,7 @@ import {
   Input,
   Stack,
   Text,
+  Heading
 } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Logo } from '../'
@@ -29,11 +30,13 @@ const Footer = () => (
       <Stack
         spacing={{
           base: '6',
-          md: '8',
+          md: '2',
         }}
         align="start"
       >
-        <Logo />
+        <Heading as='h2' size='xl' color='red.500'>
+          HerBrand
+        </Heading>
         <Text color="muted">Create beautiful websites remarkably fast.</Text>
       </Stack>
       <Stack
@@ -103,7 +106,7 @@ const Footer = () => (
       align="center"
     >
       <Text fontSize="sm" color="subtle">
-        &copy; {new Date().getFullYear()} Chakra UI Pro, Inc. All rights reserved.
+        &copy; {new Date().getFullYear()} HerBrand, Inc. All rights reserved.
       </Text>
       <ButtonGroup variant="ghost">
         <IconButton

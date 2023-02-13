@@ -35,7 +35,7 @@ export const products = [
   {
     id: '1',
     name: 'Crosskote',
-    currency: 'ZAR',
+    currency: 'USD',
     price: 999.89,
     salePrice: 699.90,
     flag: 'new',
@@ -49,7 +49,7 @@ export const products = [
   {
     id: '2',
     name: 'Iconic Turquoise',
-    currency: 'ZAR',
+    currency: 'USD',
     price: 199,
     salePrice: 179.99,
     flag: 'on-sale',
@@ -64,7 +64,7 @@ export const products = [
   {
     id: '3',
     name: 'Marble Leather',
-    currency: 'ZAR',
+    currency: 'USD',
     price: 199,
     imageUrl:
       'https://images.unsplash.com/photo-1564594985645-4427056e22e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80',
@@ -77,7 +77,7 @@ export const products = [
   {
     id: '4',
     name: 'Silve wolf',
-    currency: 'ZAR',
+    currency: 'USD',
     price: 199,
     imageUrl:
       'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=680&q=80',
@@ -90,7 +90,7 @@ export const products = [
   {
     id: '5',
     name: 'Ferragamo bag',
-    currency: 'ZAR',
+    currency: 'USD',
     price: 39.99,
     description: 'Tan, 40mm, a modern Classic made for every occasion.',
     quantity: 3,
@@ -102,7 +102,7 @@ export const products = [
   {
     id: '6',
     price: 39.99,
-    currency: 'ZAR',
+    currency: 'USD',
     name: 'Bamboo Tan',
     description: 'Tan, 40mm',
     rating: 3,
@@ -114,7 +114,7 @@ export const products = [
   {
     id: '7',
     price: 39.99,
-    currency: 'ZAR',
+    currency: 'USD',
     name: 'Yeezy Sneakers',
     description: 'Tan, 40mm, a modern Classic made for every occasion.',
     rating: 4,

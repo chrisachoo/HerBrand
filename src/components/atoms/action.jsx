@@ -1,5 +1,6 @@
 import {
-  Button,
+  Avatar,
+  AvatarBadge,
   IconButton,
   Menu,
   MenuButton,
@@ -24,12 +25,15 @@ import { useContext } from 'react';
 const AvatarButton = ({ user }) => {
   return (
     <Stack direction='row' spacing={4}>
-      <Avatar>
-        <AvatarBadge boxSize='1.25em' bg='green.500' />
-      </Avatar>
-      <Avatar>
-        <AvatarBadge borderColor='papayawhip' bg='tomato' boxSize='1.25em' />
-      </Avatar>
+      {user ? (
+        <Avatar size='sm'>
+          <AvatarBadge boxSize='1.25em' bg='green.500' />
+        </Avatar>
+      ) : (
+        <Avatar size='sm'>
+          <AvatarBadge borderColor='papayawhip' bg='tomato' boxSize='1.25em' />
+        </Avatar>
+      )}
     </Stack>
   )
 }
@@ -39,19 +43,19 @@ const Action = () => {
   const { cartItems } = useContext(CartContext);
 
   return (
-    <Stack direction='row' spacing={2}>
-      <IconButton
-        icon={<MdShoppingCart />}
-        as={ReachLink}
-        variant={'link'}
-        cursor='pointer'
-        aria-label='Cart'
-        color='teal'
-        to='/cart'
-      />
+    <Stack direction='row' spacing={3} alignItems='center'>
+      <Avatar icon={<MdShoppingCart />} as={ReachLink} background='blue.500'
+        variant={'link'} to='/cart' size='sm'
+      >
+        {cartItems.length > 0 && (
+          <AvatarBadge boxSize='1.25em' bg='blue.500'>{cartItems.length}</AvatarBadge>
+        )}
+      </Avatar>
 
       <Menu isLazy closeOnSelect={true}>
-        <MenuButton as={IconButton} icon={<FaUser />} color='blue.500' />
+        <MenuButton>
+          <AvatarButton user={user} />
+        </MenuButton>
         {user ?
           <MenuList minWidth='170px'>
             <MenuItem icon={<BiDetail />}>
