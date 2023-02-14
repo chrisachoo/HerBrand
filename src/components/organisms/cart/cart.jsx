@@ -14,7 +14,7 @@ import CartContext from '../../../context/cart/cartContext';
 import { useContext } from 'react';
 
 const Cart = () => {
-  const { cartItems, checkout, clearCart } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   return (
     <Box
