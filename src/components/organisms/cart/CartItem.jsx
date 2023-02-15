@@ -1,6 +1,7 @@
-import { CloseButton, Flex, Link, Select, useColorModeValue } from '@chakra-ui/react';
+import { CloseButton, Flex, IconButton, Link, Select, useColorModeValue } from '@chakra-ui/react';
 import { PriceTag } from './PriceTag';
 import { CartProductMeta } from './CartProductMeta';
+import {MdDeleteForever} from 'react-icons/md';
 import { useContext } from 'react';
 import CartContext from '../../../context/cart/cartContext';
 import HookUsage from './cartSpinner';
@@ -44,7 +45,7 @@ export const CartItem = (props) => {
           md: 'flex',
         }}
       >
-        <HookUsage/>
+        <HookUsage />
 
         {/* <QuantitySelect
           value={quantity}
@@ -67,10 +68,15 @@ export const CartItem = (props) => {
           md: 'none',
         }}
       >
-        <Link fontSize="sm" textDecor="underline">
-          Delete
-        </Link>
-        <HookUsage/>
+        <IconButton
+          variant='outline'
+          color='red' colorScheme='blue'
+          aria-label='Delete'
+          icon={<MdDeleteForever />}
+          onClick={() => removeFromCart(props)}
+        />
+
+        <HookUsage />
         {/* <QuantitySelect
           value={quantity}
           onChange={(e) => {
